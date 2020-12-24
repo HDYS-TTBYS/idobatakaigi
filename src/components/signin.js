@@ -49,7 +49,7 @@ export default function SignIn({ setName }) {
     const classes = useStyles();
     const [disabled, setDisabled] = useState(true);
     const [nameString, setNameString] = useState("");
-    console.log({ disabled, nameString });
+    // console.log({ disabled, nameString });
 
     useEffect(() => {
         const disabled = nameString === ""
@@ -77,12 +77,13 @@ export default function SignIn({ setName }) {
                         onChange={(e) => setNameString(e.target.value)}
                     />
                     <Button
-                        type="submit"
+                        type="button"
                         fullWidth
                         variant="contained"
                         color="primary"
                         className={classes.submit}
                         disabled={disabled}
+                        onClick={() => setName(nameString)}
                     >
                         はじめる
                     </Button>

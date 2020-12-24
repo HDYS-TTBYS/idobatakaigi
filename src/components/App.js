@@ -5,7 +5,7 @@ import Signin from "./signin";
 
 export default () => {
     const [name, setName] = useState("");
-    console.log(name);
+    console.log({ name });
 
     return <Signin setName={setName} />;
 };
