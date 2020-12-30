@@ -75,6 +75,13 @@ export default function SignIn({ setName }) {
                         autoComplete="name"
                         autoFocus
                         onChange={(e) => setNameString(e.target.value)}
+                        onKeyDown={(e) => {
+                            console.log({ key: e.key });
+                            if (e.key === "Enter") {
+                                e.preventDefault();
+                                setName(e.target.value)
+                            }
+                        }}
                     />
                     <Button
                         type="button"
