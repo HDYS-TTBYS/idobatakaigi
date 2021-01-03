@@ -80,7 +80,6 @@ export default function SignIn({ setName }) {
                         onKeyDown={(e) => {
                             if (isComposed) return;
 
-                            console.log({ key: e.key });
                             if (e.key === "Enter") {
                                 e.preventDefault();
                                 setName(e.target.value)
